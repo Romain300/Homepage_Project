@@ -8,6 +8,8 @@
 }
 
 
+
+
 .my-work,
 .about,
 footer {
@@ -20,7 +22,7 @@ footer {
     flex: 1;
     position: relative;
     display: flex;
-    min-width: 440px;
+    
     
 }
 
@@ -83,6 +85,7 @@ img {
     display: flex;
     flex-direction: column;
     box-shadow: 2px 3px 5px  rgb(182, 178, 178);
+   
 }
 
 .my-work {
@@ -93,10 +96,15 @@ img {
 .img-project {
     color: white;
     font-weight: 300;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
-    padding: 6rem 2rem;
+    align-items: center;
+    flex: 3;
+    min-height: 300px;
+    text-align: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    
     
     
     
@@ -128,20 +136,16 @@ img {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(293px, 1fr)); */
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 4rem;
-    row-gap: 5rem;
+    gap: 3rem;
     justify-items: center;
     align-items: center;
 }
 
 footer {
     background-color: rgb(50, 147, 226);
+    color: white;
 }
 
-footer {
-    color: white;
-    
-}
 
 .contact-information {
     display: flex;
@@ -185,15 +189,26 @@ header {
     
 }
 
-/* .project-content {
+.project-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
+    flex: 1;
     
-} */
+}
 
- @media (max-width: 1200px) and  (min-width : 601px) {
+ @media (max-width: 1200px) and  (min-width : 701px) {
+
+    .my-work,
+    footer {
+        
+        padding: 5rem 1rem;
+    }
+
+    footer {
+        gap: 1rem;
+    }
 
    .profil-pic {  
         width: 340px;
@@ -237,11 +252,15 @@ header {
 
     .projects {
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+    .contact {
+        flex: 1;
     }
 
  }
 
- @media (max-width: 600px) {
+ @media (max-width: 700px) {
 
     .about {
         flex-direction: column;
@@ -265,11 +284,7 @@ header {
         box-shadow: none;
     }
 
-    .profil-pic {
-        width: 80%;
-        padding: 1rem;
-        flex: 1;
-    }
+  
 
     footer {
         flex-direction: column;
@@ -288,6 +303,8 @@ header {
 
     .projects {
         grid-template-columns: 1fr;
+        flex: 1;
+        
     }
 
     .my-work {
@@ -295,10 +312,18 @@ header {
         margin-bottom: 5rem;
     }
 
-    .projects {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    .project-card {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
+
+    
+    
+    .about {
+        justify-content: center;
+        align-items: center;
+    }
+
     
 
     
